@@ -39,7 +39,7 @@ def index():
    return render_template("index.html", mars=mars)
 
     # index.html (index.html is the default HTML file that we'll use to display the content we've scraped). This means that when we visit our web app's HTML page, we will see the home page.
-    # mars = mongo.db.mars.find_one() uses PyMongo to find the "mars" collection in our database, which we will create when we convert our Jupyter scraping code to Python Script. We will also assign that path to themars variable for use later.
+    # mars = mongo.db.mars.find_one() uses PyMongo to find the "mars" collection in our database, which we will create when we convert our Jupyter scraping code to Python Script. We will also assign that path to the mars variable for use later.
         # What is the find_one() method doing?
         # Why do we need to use the mongo=PyMongo(app) to find the mars collection?
     # return render_template("index.html" tells Flask to return an HTML template using an index.html file. We'll create this file after we build the Flask routes.

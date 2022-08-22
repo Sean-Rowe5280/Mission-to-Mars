@@ -7,7 +7,7 @@ import datetime as dt
 
 ## Define function to initialize the bowser, create data dictionary, end the WebDriver and return the scraped data.
 
-def scraped_all():
+def scrape_all():
     # Set up Splinter: Initialize headless driver for deployment
 
         ## we can see the word "browser" here twice: Coding guidelines do not require that these match, even though they do in our current code.
@@ -15,7 +15,7 @@ def scraped_all():
         ## the other is the name of a parameter.
 
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=True)     ## Change headless=False to True, this runs scraping behind the scenes without the users seeing it.
+    browser = Browser('chrome', **executable_path, headless=False)     ## Change headless=False to True, this runs scraping behind the scenes without the users seeing it.
 
     ## set our news title and paragraph variables 
     news_title, news_paragraph = mars_news(browser)    ## This line of code tells Python that we'll be using our mars_news function to pull this data.
